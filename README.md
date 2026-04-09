@@ -1,73 +1,118 @@
-# React + TypeScript + Vite
+# 💼 Adriel Louis Management Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 **Live Site:** https://adriellouismanagement.com  
 
-Currently, two official plugins are available:
+A modern, high-performance landing page for a wealth management company, built to showcase services, build trust, and convert visitors into clients.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is a sleek and responsive website designed for a wealth management brand. It focuses on:
 
-## Expanding the ESLint configuration
+- Clear value proposition
+- Professional brand presence
+- Lead generation & client engagement
+- Fast performance via Vercel deployment
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- ⚡ Fast & Optimized — Deployed on Vercel for global edge performance  
+- 📱 Fully Responsive — Works seamlessly across desktop, tablet, and mobile  
+- 🎯 Conversion-Focused Design — Built to drive inquiries and trust  
+- 🧭 Smooth Navigation — Clean UX with intuitive section flow  
+- 🎨 Modern UI/UX — Minimalist and premium financial branding  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Tech Stack
+
+- Frontend: React / Vite
+- Styling: Tailwind CSS / CSS Modules  
+- Deployment: Vercel  
+
+---
+
+## 📂 Project Structure
+
+```
+├── components/     # Reusable UI components
+├── pages/          # Application routes
+├── public/         # Static assets
+├── styles/         # Styling files
+├── utils/          # Helper functions
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repository
+
 ```
+git clone https://github.com/your-username/adriel-management-website.git
+cd adriel-management-website
+```
+
+### 2. Install dependencies
+
+```
+npm install
+# or
+yarn install
+```
+
+### 3. Run locally
+
+```
+npm run dev
+```
+
+Visit: http://localhost:3000
+
+---
+
+## 🚀 Deployment
+
+This project is deployed on Vercel for seamless CI/CD.
+
+### Deploy your own version:
+
+1. Push your repo to GitHub  
+2. Import the project into Vercel  
+3. Deploy with one click  
+
+---
+
+## 🎯 Purpose
+
+This project was built as a side project to:
+
+- Demonstrate frontend engineering skills  
+- Build a real-world fintech/wealth management UI  
+- Serve as a portfolio-ready production app  
+
+---
+
+## 📈 Future Improvements
+
+- Client dashboard integration  
+- API-driven financial insights  
+- Authentication & user onboarding  
+- SEO optimization & analytics tracking  
+
+---
+
+## 👨‍💻 Author
+
+**Jevon Wirjono**  
+Software Engineer  
+
+---
+
+## 📄 License
+
+This project is for portfolio and demonstration purposes.
