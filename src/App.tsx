@@ -53,7 +53,7 @@ const SectionHeading = ({ children, subtitle }: { children: React.ReactNode; sub
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-gold uppercase tracking-[0.3em] text-xs font-semibold mb-4"
+        className=" uppercase tracking-[0.3em] text-xs font-semibold mb-4"
       >
         {subtitle}
       </motion.p>
@@ -89,7 +89,7 @@ const CustomSelect = ({
         <span className={cn(value ? "text-white" : "text-white/30")}>
           {value || "Select option"}
         </span>
-        <ChevronDown className={cn("w-4 h-4 text-gold transition-transform duration-300", isOpen && "rotate-180")} />
+        <ChevronDown className={cn("w-4 h-4  transition-transform duration-300", isOpen && "rotate-180")} />
       </button>
 
       <AnimatePresence>
@@ -116,7 +116,7 @@ const CustomSelect = ({
                   }}
                   className={cn(
                     "w-full text-left px-4 py-3 text-sm transition-colors hover:bg-gold hover:text-black",
-                    value === option ? "text-gold bg-white/5" : "text-white/70"
+                    value === option ? " bg-white/5" : "text-white/70"
                   )}
                 >
                   {option}
@@ -194,26 +194,26 @@ export default function App() {
           {/* Logo - Left */}
           <div className="flex-1 basis-0 flex items-center gap-3">
             <div className="w-10 h-10 border border-gold flex items-center justify-center rotate-45 group hover:bg-gold transition-all duration-500 cursor-pointer">
-              <span className="rotate-[-45deg] font-serif text-xl text-gold group-hover:text-black transition-colors">AL</span>
+              <span className="rotate-[-45deg] font-serif text-xl  group-hover:text-black transition-colors">AL</span>
             </div>
             <span className="font-serif text-xl tracking-[0.2em] uppercase hidden lg:block">
-              Adriel Louis <span className="text-gold">Management</span>
+              Adriel Louis <span className="">Management</span>
             </span>
           </div>
 
           {/* Navigation Links - Centered */}
           <div className="hidden md:flex items-center justify-center gap-12 text-[11px] uppercase tracking-[0.3em] font-semibold">
-            <a href="#about" className="hover:text-gold transition-all relative group py-2">
+            <a href="#about" className="hover: transition-all relative group py-2">
               About
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
             </a>
-            <a href="#services" className="hover:text-gold transition-all relative group py-2">
+            <a href="#services" className="hover: transition-all relative group py-2">
               Services
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
             </a>
-            <a href="#portfolio" className="hover:text-gold transition-all relative group py-2">
+            <a href="#portfolio" className="hover: transition-all relative group py-2">
               Portfolio
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
             </a>
           </div>
 
@@ -221,9 +221,9 @@ export default function App() {
           <div className="flex-1 basis-0 flex justify-end">
             <a
               href="#contact"
-              className="group relative px-6 py-3 overflow-hidden border border-gold/50 text-gold text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold transition-all hover:text-black"
+              className="group relative px-6 py-3 overflow-hidden border border-white/50  text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold transition-all hover:text-black"
             >
-              <span className="absolute inset-0 w-0 bg-gold transition-all duration-500 ease-out group-hover:w-full" />
+              <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full" />
               <span className="relative z-10">Free Consultation</span>
             </a>
           </div>
@@ -250,7 +250,7 @@ export default function App() {
           >
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light mb-6 sm:mb-10 leading-[1.1]">
               Preserving Wealth.<br />
-              <span className="italic font-serif text-gold">Defining Legacies.</span>
+              <span className="italic font-serif ">Defining Legacies.</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 sm:mb-16 font-light leading-relaxed px-4">
               Bespoke financial strategies for the world's most discerning individuals and families.
@@ -261,11 +261,11 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16 max-w-2xl mx-auto mt-12 sm:mt-24">
             <div className="text-center">
               <Counter value={2.5} suffix="B+" duration={2.5} />
-              <p className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs mt-3 font-semibold">Assets Under Management</p>
+              <p className=" uppercase tracking-[0.2em] text-[10px] sm:text-xs mt-3 font-semibold">Assets Under Management</p>
             </div>
             <div className="text-center">
               <Counter value={150} suffix="+" duration={2} />
-              <p className="text-gold uppercase tracking-[0.2em] text-[10px] sm:text-xs mt-3 font-semibold">Global Clients</p>
+              <p className=" uppercase tracking-[0.2em] text-[10px] sm:text-xs mt-3 font-semibold">Global Clients</p>
             </div>
           </div>
         </div>
@@ -312,11 +312,11 @@ export default function App() {
                   window.location.hash = "contact";
                 }}
               >
-                <item.icon className="w-10 h-10 text-gold mb-6 group-hover:scale-110 transition-transform" />
+                <item.icon className="w-10 h-10  mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="text-2xl mb-4">{item.title}</h3>
                 <p className="text-white/50 mb-8 font-light leading-relaxed">{item.desc}</p>
 
-                <button className="flex items-center gap-2 text-gold text-sm uppercase tracking-widest font-semibold group-hover:gap-4 transition-all">
+                <button className="flex items-center gap-2  text-sm uppercase tracking-widest font-semibold group-hover:gap-4 transition-all">
                   Explore {item.purpose} <ChevronRight className="w-4 h-4" />
                 </button>
 
@@ -406,7 +406,7 @@ export default function App() {
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="w-16 h-16 border border-gold/30 flex items-center justify-center mx-auto mb-6 rotate-45 group hover:bg-gold transition-all">
-                  <item.icon className="w-8 h-8 text-gold rotate-[-45deg] group-hover:text-black" />
+                  <item.icon className="w-8 h-8  rotate-[-45deg] group-hover:text-black" />
                 </div>
                 <h4 className="text-xl mb-3">{item.title}</h4>
                 <p className="text-white/50 text-sm font-light leading-relaxed">{item.desc}</p>
@@ -430,7 +430,7 @@ export default function App() {
                   { step: "04", title: "Monitoring", desc: "Continuous rebalancing and tactical adjustments." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-8">
-                    <span className="font-serif text-4xl text-gold/30">{item.step}</span>
+                    <span className="font-serif text-4xl /30">{item.step}</span>
                     <div>
                       <h5 className="text-xl mb-2">{item.title}</h5>
                       <p className="text-white/50 font-light">{item.desc}</p>
@@ -452,7 +452,7 @@ export default function App() {
                   <div key={i} className="space-y-2">
                     <div className="flex justify-between text-sm uppercase tracking-widest">
                       <span>{item.label}</span>
-                      <span className="text-gold">{item.value}</span>
+                      <span className="">{item.value}</span>
                     </div>
                     <div className="h-1 bg-white/5 overflow-hidden">
                       <motion.div
@@ -537,7 +537,7 @@ export default function App() {
 
             <button
               disabled={isSubmitting}
-              className="w-full py-4 bg-gold text-black uppercase tracking-[0.2em] font-bold hover:bg-gold-dark transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full py-4 bg-white text-black uppercase tracking-[0.2em] font-bold hover:bg-gold transition-all flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {isSubmitting ? (
                 <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
@@ -577,17 +577,17 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 border border-gold flex items-center justify-center rotate-45">
-              <span className="rotate-[-45deg] font-serif text-sm text-gold">AL</span>
+              <span className="rotate-[-45deg] font-serif text-sm ">AL</span>
             </div>
             <span className="font-serif text-sm tracking-widest uppercase">
-              Adriel Louis <span className="text-gold">Management</span>
+              Adriel Louis <span className="">Management</span>
             </span>
           </div>
           <div className="flex gap-8 text-[10px] uppercase tracking-[0.2em] text-white/40">
             <span>© 2026 Adriel Louis Management</span>
-            <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-gold transition-colors">Disclosures</a>
+            <a href="#" className="hover: transition-colors">Privacy Policy</a>
+            <a href="#" className="hover: transition-colors">Terms of Service</a>
+            <a href="#" className="hover: transition-colors">Disclosures</a>
           </div>
           <div className="flex gap-4">
             <a href="#" className="w-8 h-8 border border-white/10 flex items-center justify-center hover:border-gold transition-colors">
