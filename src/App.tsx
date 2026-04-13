@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useInView } from "react-intersection-observer";
 import {
-  Users,
   ShieldCheck,
   Briefcase,
   BarChart3,
@@ -11,8 +10,6 @@ import {
   ChevronDown,
   ArrowRight,
   Globe,
-  Lock,
-  Award,
   Landmark,
   Percent,
   Umbrella,
