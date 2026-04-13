@@ -550,7 +550,7 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
                     </div>
                   </div>
                 ))}
-                <p className="font-serif text-4xl /30">You do not just receive advice, you gain a long-term strategic partner.</p>
+
               </div>
             </div>
             <div>
@@ -585,7 +585,9 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
                 <p className="mt-4 text-white not-italic font-medium uppercase tracking-widest text-xs">— Principal, European Family Office</p>
               </div>
             </div>
+            
           </div>
+          <p className="font-serif text-3xl /30 m-14">You do not just receive advice, you gain a long-term strategic partner.</p>
         </div>
       </section>
 
