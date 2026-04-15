@@ -9,7 +9,6 @@ import {
   Mail,
   ChevronDown,
   ArrowRight,
-  Globe,
   Landmark,
   Percent,
   Umbrella,
