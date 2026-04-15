@@ -15,8 +15,9 @@ import {
   Umbrella,
   Hourglass,
   Banknote,
-  Building2
+  Building2,
 } from "lucide-react";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { cn } from "./lib/utils";
 import logoRectangle from "./assets/Logo OWM Rectangle.png";
 
@@ -45,7 +46,7 @@ const Counter = ({ value, suffix = "", duration = 2 }: { value: number; suffix?:
   }, [inView, value, duration]);
 
   return (
-    <span ref={ref} className="font-serif text-4xl md:text-6xl font-light">
+    <span ref={ref} className="font-sans text-4xl md:text-6xl font-light">
       {count.toLocaleString()}{suffix}
     </span>
   );
@@ -202,7 +203,7 @@ export default function App() {
     alt="Logo"
     className="h-18 w-auto object-contain cursor-pointer"
   />
-            {/* <span className="font-serif text-md tracking-[0.2em] uppercase hidden lg:block">
+            {/* <span className="font-sans text-md tracking-[0.2em] uppercase hidden lg:block">
               Orthodox Wealth <span className="">Management</span>
             </span> */}
           </div>
@@ -230,7 +231,7 @@ export default function App() {
               className="group relative px-6 py-3 overflow-hidden border border-white/50  text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold transition-all hover:text-black"
             >
               <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full" />
-              <span className="relative z-10">Free Consultation</span>
+              <span className="relative z-10">Request Consultation</span>
             </a>
           </div>
         </div>
@@ -254,9 +255,9 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 sm:mb-10 leading-[1.1]">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light mt-4 mb-4 sm:mb-10 leading-[1.1]">
               Building Wealth<br />
-              <span className="italic font-serif ">That Lasts Across Generations</span>
+              <span className="italic font-sans ">That Lasts Across Generations</span>
             </h1>
             <p className="text-base sm:text-md md:text-lg text-white/60 max-w-2xl mx-auto mb-10 sm:mb-16 font-light leading-relaxed px-4">
               We design fully integrated financial strategies that align your investments, taxes, insurance, debt structures, business interests, estate planning, and asset protection into one cohesive plan.
@@ -264,14 +265,14 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16 max-w-2xl mx-auto mt-12 sm:mt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16 max-w-2xl mx-auto mt-9 sm:mt-18">
             <div className="text-center">
-              <Counter value={2.5} suffix="B+" duration={2.5} />
+              <Counter value={100} suffix="M+" duration={2.5} />
               <p className=" uppercase tracking-[0.2em] text-[10px] sm:text-xs mt-3 font-semibold">Assets Under Management</p>
             </div>
             <div className="text-center">
-              <Counter value={150} suffix="+" duration={2} />
-              <p className=" uppercase tracking-[0.2em] text-[10px] sm:text-xs mt-3 font-semibold">Global Clients</p>
+              <Counter value={100} suffix="+" duration={2} />
+              <p className=" uppercase tracking-[0.2em] text-[10px] sm:text-xs mt-3 font-semibold">Clients</p>
             </div>
           </div>
         </div>
@@ -280,57 +281,120 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
       {/* CTA Section - Problems */}
       <section className="py-24 bg-[#0f0f0f] border-y border-white/5">
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-32">
-          <SectionHeading subtitle="THE PROBLEM WE SOLVE">Most financial decisions are made in isolation. <br/>That’s where the problem begins.</SectionHeading>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-  {
-    title: "Fragmented Advice",
-    desc: "Investment, tax, insurance, debt, and estate planning are often handled separately without a unified strategy.",
-    icon: BarChart3,
-    purpose: "Disconnected Planning"
-  },
-  {
-    title: "Misaligned Decisions",
-    desc: "Insurance, borrowing, and tax strategies are often inefficient, leading to unnecessary costs and risks.",
-    icon: ShieldCheck,
-    purpose: "Inefficient Structuring"
-  },
-  {
-    title: "Long-Term Strategy",
-    desc: "Many professionals and business owners earn well but lack a structured roadmap for sustainable wealth.",
-    icon: Briefcase,
-    purpose: "Uncertain Outcomes"
-  }
-            ].map((item, i) => (
+          <SectionHeading subtitle="THE PROBLEM WE SOLVE">
+            Most financial decisions are made in isolation. <br />
+            That’s where the problem begins.
+          </SectionHeading>
 
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+            {[
+              {
+                title: "Disconnected Financial Decisions",
+                desc: "Investment, tax, insurance, and debt decisions are often made separately — weakening overall outcomes.",
+                icon: BarChart3,
+                purpose: "Plan Your Finance Journey",
+              },
+              {
+                title: "Inefficient Financial Structure",
+                desc: "Borrowing, tax, and protection strategies are frequently misaligned — creating unnecessary costs and risk.",
+                icon: ShieldCheck,
+                purpose: "See How Structure Changes Outcomes",
+              },
+              {
+                title: "Wealth Without a System",
+                desc: "High income does not guarantee lasting wealth — without structure, growth often comes with hidden risk.",
+                icon: Briefcase,
+                purpose: "Learn More About Our System",
+              },
+            ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="glass-panel p-8 group hover:border-gold/50 transition-all cursor-pointer"
+                className="glass-panel p-8 group hover:border-gold/50 transition-all cursor-pointer h-full flex flex-col"
                 onClick={() => {
                   if (window.location.hash === "#contact") {
-                    // reset first
                     history.replaceState(null, "", " ");
                   }
-
                   window.location.hash = "contact";
                 }}
               >
-                <item.icon className="w-10 h-10  mb-6 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl mb-4">{item.title}</h3>
-                <p className="text-white/50 mb-8 font-light leading-relaxed">{item.desc}</p>
+                {/* Icon */}
+                <item.icon className="w-10 h-10 mb-6 group-hover:scale-110 transition-transform" />
 
-                <button className="flex items-center gap-2  text-sm uppercase tracking-widest font-semibold group-hover:gap-4 transition-all">
-                  Explore {item.purpose} <ChevronRight className="w-4 h-4" />
+                {/* Title */}
+                <h3 className="text-2xl mb-4 min-h-[64px]">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-white/50 mb-8 font-light leading-relaxed flex-grow line-clamp-4">
+                  {item.desc}
+                </p>
+
+                {/* CTA */}
+                <button className="flex items-center gap-2 text-sm uppercase tracking-widest font-semibold group-hover:gap-4 transition-all mt-auto">
+                  {item.purpose} <ChevronRight className="w-4 h-4" />
                 </button>
-
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Diagram Flow */}
+      <section className="py-28 bg-[#0f0f0f] border-y border-white/5">
+  <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-32">
+
+    {/* Header */}
+    <div className="text-center mb-20">
+      <SectionHeading subtitle="HOW IT SHOULD WORK">
+        A Structured Financial Flow
+      </SectionHeading>
+    </div>
+
+    {/* Flow */}
+    <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-6">
+
+      {[
+        "Income",
+        "Tax",
+        "Debt",
+        "Investment",
+        "Protection",
+        "Estate"
+      ].map((step, i) => (
+        <div key={i} className="flex items-center">
+
+          {/* Step */}
+          <div className="text-center group">
+            <div className="font-sans text-3xl text-white/20 group-hover:text-gold transition-colors">
+              {String(i + 1).padStart(2, "0")}
+            </div>
+            <div className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
+              {step}
+            </div>
+          </div>
+
+          {/* Divider */}
+          {i < 5 && (
+            <div className="hidden md:block w-16 h-[1px] bg-white/10 mx-6" />
+          )}
+        </div>
+      ))}
+
+    </div>
+
+    {/* Bottom statement */}
+    <div className="mt-20 text-center max-w-3xl mx-auto">
+      <p className="text-white/70 font-light text-lg leading-relaxed">
+        When structured correctly, each decision reinforces the next — creating a system that is efficient, protected, and built to last.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* About Section - Session */}
       <section id="about" className="py-24 overflow-hidden">
@@ -343,35 +407,33 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
               <SectionHeading subtitle="WHO WE ARE">A Foundation of Trust</SectionHeading>
               <div className="space-y-6 text-white/70 font-light text-md leading-relaxed">
                 <p>
-  Orthodox Wealth Management (OWM) is a financial advisory firm founded in 2025 by Adriel Reynaldo Louis, CFP®, 
-  with professional experience across Australia and Indonesia since 2020.
+  Orthodox Wealth Management (OWM) is a financial advisory firm founded in 2024 by Adriel Reynaldo Louis, CFP®, with professional experience across Australia and Indonesia since 2020.
 </p>
 
 <p>
-  We work with high-net-worth individuals (HNWI), entrepreneurs, and business owners who require structured 
-  and sophisticated financial strategies.
+  We work with high-net-worth individuals, entrepreneurs, and professionals whose financial lives have reached a level of complexity where decisions can no longer be made in isolation. At the same time, we partner with emerging affluent individuals, helping them move beyond income generation and build structured, long-term wealth.
 </p>
 
 <p>
-  At the same time, we partner with professionals and emerging affluent individuals, helping them build strong 
-  financial foundations and transition into long-term wealth creators.
+  Our approach is not built around products, but around systems. We integrate how you earn, invest, borrow, protect, and transfer wealth into one cohesive financial structure.
 </p>
 
 <p>
-  Our philosophy is rooted in “orthodox wealth strategies” — disciplined, time-tested principles used by 
-  sophisticated investors and families over generations.
+  Our philosophy is rooted in “orthodox wealth strategies” — disciplined, time-tested principles used by sophisticated investors and families to build, protect, and sustain wealth across generations.
 </p>
 
 <p>
-  By combining financial advisory expertise, corporate finance experience, real-world business ownership, and financing insight, we deliver a holistic approach that aligns your personal wealth, liabilities, business interests, and long-term legacy.
+  By combining personal financial planning, corporate financial strategy, and debt structuring into one integrated framework, we ensure that every financial decision supports the next.
 </p>
+<p>
+  This integrated perspective allows us to deliver advice that is not only technically sound, but also strategically aligned — helping clients build wealth that is efficient, protected, and designed to last.</p>
                 
               </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="relative"
+              className="relative mb-[250px]"
             >
               <div className="absolute -inset-4 border border-gold/20 translate-x-4 translate-y-4" />
               <img
@@ -387,105 +449,132 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
 
       {/* Services & Differentiation */}
       <section id="services" className="py-24 bg-[#0f0f0f]">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-32">
-          <div className="text-center mb-20">
-            <SectionHeading>Our Expertise</SectionHeading>
+  <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-32">
+    
+    {/* Header */}
+    <div className="text-center mb-20 max-w-2xl mx-auto">
+      <SectionHeading>Our Expertise</SectionHeading>
+      <p className="text-white/60 font-light leading-relaxed">
+        Each component is designed individually — but structured to work as one integrated system.
+      </p>
+    </div>
+
+    {/* Grid */}
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 items-stretch">
+      {[
+        {
+          title: "Estate Planning (Core Expertise)",
+          desc: "Structured strategies to ensure efficient, conflict-free transfer of wealth across generations.",
+          icon: Landmark
+        },
+        {
+          title: "Asset Protection (Core Expertise)",
+          desc: "Legal and financial frameworks designed to protect your wealth from business, personal, and external risks.",
+          icon: ShieldCheck
+        },
+        {
+          title: "Tax Planning & Optimization",
+          desc: "Proactive structuring to legally minimize tax and improve overall financial efficiency.",
+          icon: Percent
+        },
+        {
+          title: "Insurance Planning",
+          desc: "Right-sized coverage aligned with your financial structure — avoiding both underinsurance and unnecessary cost.",
+          icon: Umbrella
+        },
+        {
+          title: "Retirement Planning",
+          desc: "Sustainable income strategies to secure your future lifestyle.",
+          icon: Hourglass
+        },
+        {
+          title: "Loan Broking & Debt Structuring",
+          desc: "Strategic design of personal and business borrowing to optimize cashflow, manage risk, and support long-term wealth accumulation.",
+          icon: Banknote
+        },
+        {
+          title: "Corporate Financial Planning",
+          desc: "Financial visibility and forward planning to support scalable and sustainable business growth.",
+          icon: BarChart3
+        },
+        {
+          title: "Corporate Structuring",
+          desc: "Efficient entity and ownership structures aligned with both business objectives and personal wealth strategy.",
+          icon: Building2
+        }
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="flex flex-col items-center text-center h-full"
+        >
+          {/* Icon */}
+          <div className="w-16 h-16 border border-gold/30 flex items-center justify-center mb-6 rotate-45 group hover:bg-gold transition-all">
+            <item.icon className="w-8 h-8 rotate-[-45deg] group-hover:text-black transition-colors" />
           </div>
-          <div className="grid md:grid-cols-4 gap-12">
-            {[
-                {
-                  title: "Estate Planning (Core Expertise)",
-                  desc: "Structured solutions to support seamless wealth transfer across generations",
-                  icon: Landmark
-                },
-                {
-                  title: "Asset Protection (Core Expertise)",
-                  desc: "Frameworks designed to safeguard your wealth from financial and legal risks",
-                  icon: ShieldCheck
-                },
-                {
-                  title: "Tax Planning & Optimization",
-                  desc: "Legally optimized strategies to minimize tax and preserve wealth",
-                  icon: Percent
-                },
-                {
-                  title: "Insurance Planning",
-                  desc: "Right-sized protection to avoid both underinsurance and unnecessary cost",
-                  icon: Umbrella
-                },
-                {
-                  title: "Retirement Planning",
-                  desc: "Sustainable income strategies to secure your future lifestyle",
-                  icon: Hourglass
-                },
-                {
-                  title: "Loan Broking & Debt Structuring",
-                  desc: "Financing solutions and debt strategies",
-                  icon: Banknote
-                },
-                {
-                  title: "Corporate Financial Planning",
-                  desc: "Clarity on performance and forward-looking financial strategy",
-                  icon: BarChart3
-                },
-                {
-                  title: "Corporate Structuring",
-                  desc: "Efficient structures aligned with both business and personal objectives",
-                  icon: Building2
-                }
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <div className="w-16 h-16 border border-gold/30 flex items-center justify-center mx-auto mb-6 rotate-45 group hover:bg-gold transition-all">
-                  <item.icon className="w-8 h-8  rotate-[-45deg] group-hover:text-black" />
-                </div>
-                <h4 className="text-xl mb-3">{item.title}</h4>
-                <p className="text-white/50 text-sm font-light leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+
+          {/* Title */}
+          <h4 className="text-lg font-medium mb-3 min-h-[56px]">
+            {item.title}
+          </h4>
+
+          {/* Description */}
+          <p className="text-white/50 text-sm font-light leading-relaxed flex-grow line-clamp-4">
+            {item.desc}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Bottom Statement (FULL WIDTH) */}
+    <div className="mt-16 text-center max-w-3xl mx-auto">
+      <p className="text-white/70 font-light text-lg leading-relaxed">
+        Each element is interconnected. When structured correctly, every decision strengthens the next.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* What Makes Us Different */}
       <section className="py-28 bg-[#0f0f0f] border-y border-white/5">
   <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-32">
     
     <div className="text-center mb-20">
-      <SectionHeading subtitle="What Makes Us Different">
+      <SectionHeading subtitle="This is why we are fundamentally different">
         A Structured, Institutional Approach to Wealth
       </SectionHeading>
     </div>
 
     <div className="space-y-16">
       {[
-        {
-          title: "Fully Integrated Financial Strategy",
-          desc: "We do not treat financial decisions separately. Investments, tax, insurance, debt, business structuring, estate planning, and asset protection are aligned into one cohesive strategy."
-        },
-        {
-          title: "Expertise in Estate Planning & Asset Protection",
-          desc: "A critical but underserved area — and one of our core strengths."
-        },
-        {
-          title: "Strategic View on Both Assets and Liabilities",
-          desc: "We help clients structure not only their wealth, but also their borrowing, ensuring debt decisions support rather than weaken long-term financial strength."
-        },
-        {
-          title: "Independent, Strategy-First Advice",
-          desc: "No product bias. Every recommendation is made in your best interest."
-        },
-        {
-          title: "Cross-Border Perspective",
-          desc: "Experience across Australia and Indonesia enables more sophisticated and well-rounded structuring."
-        },
-        {
-          title: "Founder-Led, High-Touch Advisory",
-          desc: "Direct involvement in every client relationship — not delegated, not standardized."
-        },
-        {
-          title: "Designed for All Stages of Wealth",
-          desc: "From professionals building wealth to HNWI managing complex structures, our approach evolves with your financial life."
-        }
+{
+    title: "We Integrate What Others Separate",
+    desc: "Most advisors focus on individual areas — investments, tax, insurance, or debt. We align every financial decision into one cohesive system."
+  },
+  {
+    title: "Expertise Where It Matters Most",
+    desc: "Estate planning and asset protection are often overlooked — yet they determine whether wealth truly lasts."
+  },
+  {
+    title: "We Structure Both Assets and Liabilities",
+    desc: "Most advisors focus on growing wealth. We ensure how you borrow supports — not weakens — your overall financial strategy."
+  },
+  {
+    title: "Strategy Before Products",
+    desc: "Our advice is not driven by products or commissions. Every recommendation is designed solely around your long-term outcome."
+  },
+  {
+    title: "Global Perspective, Local Relevance",
+    desc: "Experience across Australia and Indonesia enables more disciplined and sophisticated financial structuring."
+  },
+  {
+    title: "Direct, High-Touch Advisory",
+    desc: "You work directly with the advisor — ensuring depth, continuity, and consistent strategic oversight."
+  },
+  {
+    title: "Built to Evolve With You",
+    desc: "From early wealth building to complex structures, your financial system evolves as your life grows."
+  }
       ].map((item, i) => (
         <div
           key={i}
@@ -493,7 +582,7 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
         >
           {/* Number */}
           <div className="md:col-span-2">
-            <span className="font-serif text-4xl text-white/20 group-hover:text-gold transition-colors">
+            <span className="font-sans text-4xl text-white/20 group-hover:text-gold transition-colors">
               {String(i + 1).padStart(2, "0")}
             </span>
           </div>
@@ -510,6 +599,12 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
         </div>
       ))}
     </div>
+    <div className="mt-16 text-center max-w-3xl mx-auto">
+      <p className="text-white/70 font-light text-lg leading-relaxed">
+        Wealth is not built through isolated decisions.
+It is built through structure, alignment, and discipline over time.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -518,32 +613,32 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-32">
           <div className="grid md:grid-cols-2 gap-20">
             <div>
-              <SectionHeading subtitle="Our Methodology">How We Work With You</SectionHeading>
+              <SectionHeading subtitle="Our strategic process">How We Structure Your Financial System</SectionHeading>
               <div className="space-y-12">
                 {[
   {
     step: "01",
-    title: "Understand",
-    desc: "We begin by understanding your financial position, goals, obligations, business interests, and priorities in depth."
+    title: "Deep Financial Understanding",
+    desc: "We go beyond surface-level data to understand your financial structure, decision patterns, risk exposure, liabilities, and long-term objectives."
   },
   {
     step: "02",
-    title: "Design",
-    desc: "We develop a fully integrated strategy covering investment, tax, insurance, debt structure, asset protection, and long-term legacy."
+    title: "Integrated Strategy Design",
+    desc: "We design a cohesive financial system that aligns your investments, tax structure, debt position, protection, and long-term legacy."
   },
   {
     step: "03",
-    title: "Implement",
-    desc: "We guide you through execution with precision, clarity, and practical coordination."
+    title: "Coordinated Execution",
+    desc: "We guide execution across multiple areas — ensuring each decision is implemented in alignment, not in isolation."
   },
   {
     step: "04",
-    title: "Monitor & Refine",
-    desc: "Your strategy evolves as your life, business, liabilities, and financial complexity grow."
+    title: "Continuous Alignment & Refinement",
+    desc: "As your life, business, and financial complexity evolve, your strategy is continuously refined to maintain efficiency, protection, and alignment."
   }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-8">
-                    <span className="font-serif text-4xl /30">{item.step}</span>
+                    <span className="font-sans text-4xl /30">{item.step}</span>
                     <div>
                       <h5 className="text-xl mb-2">{item.title}</h5>
                       <p className="text-white/50 font-light">{item.desc}</p>
@@ -554,7 +649,10 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
               </div>
             </div>
             <div>
-              <SectionHeading subtitle="Client Portfolio">Representative Allocations</SectionHeading>
+              <SectionHeading subtitle="Client Portfolio">How We Allocate Capital Strategically</SectionHeading>
+              <p className="text-white/60 font-light leading-relaxed max-w-xl mb-16">
+  Allocation is not about chasing returns — it is about structuring capital across risk, liquidity, and long-term objectives. Each portfolio is designed to align with your financial position and overall strategy.
+</p>
               <div className="space-y-4">
                 {[
                   { label: "Private Equity", value: "35%", color: "bg-gold" },
@@ -580,14 +678,13 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
                 ))}
               </div>
               <div className="mt-12 p-8 border border-white/10 bg-white/5 italic text-white/60 font-light">
-                "Orthodox Wealth Management has transformed our family's approach to wealth. Their clarity and
-                strategic foresight are unmatched in the industry."
-                <p className="mt-4 text-white not-italic font-medium uppercase tracking-widest text-xs">— Principal, European Family Office</p>
+                "Orthodox Wealth Management brought clarity and structure to our financial decisions — transforming how we manage, protect, and plan our wealth."
+                <p className="mt-4 text-white not-italic font-medium uppercase tracking-widest text-xs">— Hendy, Indonesian Businessman</p>
               </div>
             </div>
             
           </div>
-          <p className="font-serif text-3xl /30 m-14">You do not just receive advice, you gain a long-term strategic partner.</p>
+          <p className="font-sans text-3xl /30 m-14">YYou do not just receive advice, you gain a structured and long-term strategic partner to building, protecting, and sustaining wealth.</p>
         </div>
       </section>
 
@@ -596,13 +693,13 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
         <div className="max-w-3xl mx-auto px-10 md:px-16">
           <div className="text-center mb-16">
             <SectionHeading subtitle="Private Consultation">
-    Start your journey with us today.
+    Begin a Structured Approach to Your Wealth
   </SectionHeading>
 
   {/* Main paragraph */}
   <p className="text-white/60 font-light leading-relaxed mt-6">
-    Your financial life deserves more than fragmented advice.<br />
-    It requires structure, clarity, and a long-term strategy.
+    Your financial life should not be managed in isolation.<br />
+    It requires structure, alignment, and a long-term strategy..
   </p>
 
   {/* Elegant divider */}
@@ -715,7 +812,7 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
     className="w-auto h-12 border flex items-center justify-center"
   />
 
-            <span className="font-serif text-sm tracking-widest uppercase">
+            <span className="font-sans text-sm tracking-widest uppercase">
               Orthodox Wealth <span className="">Management</span>
             </span>
           </div>
@@ -724,14 +821,25 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
             <a href="#" className="hover: transition-colors">Privacy Policy</a>
             <a href="#" className="hover: transition-colors">Terms of Service</a>
             <a href="#" className="hover: transition-colors">Disclosures</a>
+            <div className="flex"><Mail className="w-4 h-4 text-white/40"/><p className="flex ml-4">info@orthodoxwm.com</p></div>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="w-8 h-8 border border-white/10 flex items-center justify-center hover:border-gold transition-colors">
-              <Globe className="w-4 h-4 text-white/40" />
-            </a>
-            <a href="#" className="w-8 h-8 border border-white/10 flex items-center justify-center hover:border-gold transition-colors">
-              <Mail className="w-4 h-4 text-white/40" />
-            </a>
+            <a
+                href="https://www.linkedin.com/company/orthodox-wealth-management/?viewAsMember=true"
+                rel="noopener noreferrer"
+                className="w-8 h-8 border border-white/10 flex items-center justify-center hover:border-gold transition-colors"
+              >
+                <FaLinkedinIn className="w-4 h-4 text-white/40" />
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/orthodoxwealthmanagement?igsh=MXdyZG9mbWd2eHg5bQ=="
+                rel="noopener noreferrer"
+                className="w-8 h-8 border border-white/10 flex items-center justify-center hover:border-gold transition-colors"
+              >
+                <FaInstagram className="w-4 h-4 text-white/40" />
+              </a>
           </div>
         </div>
       </footer>
