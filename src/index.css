@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
 
 @theme {
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
@@ -31,3 +34,16 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #c5a059 0%, #a6854a 100%);
 }
 
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3) !important;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #c5a059 !important; /* your gold */
+  width: 24px;
+  border-radius: 6px;
+}
