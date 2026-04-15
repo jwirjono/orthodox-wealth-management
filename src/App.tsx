@@ -18,7 +18,8 @@ import {
 } from "lucide-react";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { cn } from "./lib/utils";
-import logoRectangle from "./assets/Logo OWM Rectangle.png";
+import logoLight from "/owmLogoLight.png";
+
 
 // --- Components ---
 
@@ -164,7 +165,7 @@ export default function App() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("http://localhost:3000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formState),
@@ -198,7 +199,7 @@ export default function App() {
           {/* Logo - Left */}
           <div className="flex-1 basis-0 flex items-center gap-3">
               <img
-    src={logoRectangle}
+    src={logoLight}
     alt="Logo"
     className="h-18 w-auto object-contain cursor-pointer"
   />
@@ -683,7 +684,7 @@ It is built through structure, alignment, and discipline over time.
             </div>
             
           </div>
-          <p className="font-sans text-3xl /30 m-14">YYou do not just receive advice, you gain a structured and long-term strategic partner to building, protecting, and sustaining wealth.</p>
+          <p className="font-sans text-3xl /30 m-14">You do not just receive advice, you gain a structured and long-term strategic partner to building, protecting, and sustaining wealth.</p>
         </div>
       </section>
 
@@ -806,20 +807,16 @@ It is built through structure, alignment, and discipline over time.
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
                           <img
-    src={logoRectangle}
+    src={logoLight}
     alt="Logo"
-    className="w-auto h-12 border flex items-center justify-center"
+    className="w-24 h-12 border flex items-center justify-center"
   />
-
             <span className="font-sans text-sm tracking-widest uppercase">
               Orthodox Wealth <span className="">Management</span>
             </span>
           </div>
           <div className="flex gap-8 text-[10px] uppercase tracking-[0.2em] text-white/40">
             <span>© 2026 Orthodox Wealth Management</span>
-            <a href="#" className="hover: transition-colors">Privacy Policy</a>
-            <a href="#" className="hover: transition-colors">Terms of Service</a>
-            <a href="#" className="hover: transition-colors">Disclosures</a>
             <div className="flex"><Mail className="w-4 h-4 text-white/40"/><p className="flex ml-4">info@orthodoxwm.com</p></div>
           </div>
           <div className="flex gap-4">
