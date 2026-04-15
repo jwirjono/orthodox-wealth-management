@@ -16,6 +16,8 @@ import {
   Banknote,
   Building2,
 } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { cn } from "./lib/utils";
 import logoLight from "/owmLogoLight.png";
@@ -134,6 +136,24 @@ const CustomSelect = ({
     </div>
   );
 };
+
+const testimonials = [
+  {
+    quote: "Orthodox Wealth Management brought clarity and structure to our financial decisions — transforming how we manage, protect, and plan our wealth.",
+    author: "Hendy",
+    role: "Indonesian Businessman"
+  },
+  {
+    quote: "Their integrated approach gave us confidence across investments, tax, and long-term planning.",
+    author: "Client",
+    role: "Private Investor"
+  },
+  {
+    quote: "A level of strategic clarity we have not experienced with any other advisor.",
+    author: "Principal",
+    role: "Family Office"
+  }
+];
 
 // --- Main App ---
 
@@ -677,12 +697,34 @@ It is built through structure, alignment, and discipline over time.
                   </div>
                 ))}
               </div>
-              <div className="mt-12 p-8 border border-white/10 bg-white/5 italic text-white/60 font-light">
-                "Orthodox Wealth Management brought clarity and structure to our financial decisions — transforming how we manage, protect, and plan our wealth."
-                <p className="mt-4 text-white not-italic font-medium uppercase tracking-widest text-xs">— Hendy, Indonesian Businessman</p>
-              </div>
+              <div className="mt-12">
+              <Swiper
+                modules={[Autoplay, Pagination]}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                loop={true}
+                className="!pb-10"
+              >
+                {testimonials.map((item, i) => (
+                  <SwiperSlide key={i} className="flex justify-center">
+                    <div className="p-8 border border-white/10 bg-white/5 text-white/60 font-light text-center w-full max-w-2xl h-[220px] flex flex-col justify-between">
+                      
+                      {/* Quote */}
+                      <p className="italic text-lg leading-relaxed line-clamp-4">
+                        "{item.quote}"
+                      </p>
+
+                      {/* Author */}
+                      <p className="mt-6 text-white not-italic font-medium uppercase tracking-widest text-xs">
+                        — {item.author}, {item.role}
+                      </p>
+
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
-            
+            </div>
           </div>
           <p className="font-sans text-3xl /30 m-14">You do not just receive advice, you gain a structured and long-term strategic partner to building, protecting, and sustaining wealth.</p>
         </div>
