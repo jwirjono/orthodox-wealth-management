@@ -20,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      to: process.env.EMAIL_RECIPIENT,
       subject: `New Inquiry for Adriel Louis Management - ${firstName}`,
       text: `Name: ${firstName}\nEmail: ${email}\nPhone: ${phone}\nMethod: ${preferredMethod}`,
     });
