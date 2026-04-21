@@ -848,11 +848,11 @@ It is built through structure, alignment, and discipline over time.
       <footer className="py-12 border-t border-white/10 bg-black">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-                          <img
-    src={logoLight}
-    alt="Logo"
-    className="w-24 h-12 border flex items-center justify-center"
-  />
+              <img
+                src={logoLight}
+                alt="Logo"
+                className="w-24 h-12 flex items-center justify-center"
+              />
             <span className="font-sans text-sm tracking-widest uppercase">
               Orthodox Wealth <span className="">Management</span>
             </span>
