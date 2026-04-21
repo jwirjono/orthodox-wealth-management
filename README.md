@@ -1,6 +1,6 @@
-# 💼 Adriel Louis Management Website
+# 💼 Orthodox Wealth Management Website
 
-🌐 **Live Site:** https://adriellouismanagement.com  
+🌐 **Live Site:** https://orthodoxwm.com/
 
 A modern, high-performance landing page for a wealth management company, built to showcase services, build trust, and convert visitors into clients.
 
@@ -35,43 +35,27 @@ This project is a sleek and responsive website designed for a wealth management 
 
 ---
 
-## 📂 Project Structure
-
-```
-├── components/     # Reusable UI components
-├── pages/          # Application routes
-├── public/         # Static assets
-├── styles/         # Styling files
-├── utils/          # Helper functions
-└── README.md
-```
-
----
-
 ## ⚙️ Getting Started
 
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/adriel-management-website.git
-cd adriel-management-website
+git clone https://github.com/jwirjono/orthodox-wealth-management.git
 ```
 
 ### 2. Install dependencies
 
 ```
-npm install
-# or
-yarn install
+pnpm install
 ```
 
 ### 3. Run locally
 
 ```
-npm run dev
+pnpm dev
 ```
 
-Visit: http://localhost:3000
+Visit: http://localhost:5137
 
 ---
 
