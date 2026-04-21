@@ -878,6 +878,15 @@ It is built through structure, alignment, and discipline over time.
               >
                 <FaInstagram className="w-4 h-4 text-white/40" />
               </a>
+              <a
+                href="https://wa.me/6285111218413"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="wa-contact"
+              >
+                <i className="fab fa-whatsapp"></i>
+                {/* <span>Contact Us</span> */}
+              </a>
           </div>
         </div>
       </footer>

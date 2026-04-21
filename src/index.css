@@ -47,3 +47,24 @@ h1, h2, h3, h4, h5, h6 {
   width: 24px;
   border-radius: 6px;
 }
+
+
+/* WhatsApp button */
+.wa-contact {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #25D366;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.wa-contact:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+}
