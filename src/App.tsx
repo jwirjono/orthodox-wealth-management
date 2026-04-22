@@ -220,8 +220,9 @@ export default function App() {
           <div className="flex-1 basis-0 flex items-center gap-3">
               <img
     src={logoLight}
-    alt="Logo"
+    alt="Orthodox Wealth Management Light Logo"
     className="h-18 w-auto object-contain cursor-pointer"
+    loading="lazy"
   />
             {/* <span className="font-sans text-md tracking-[0.2em] uppercase hidden lg:block">
               Orthodox Wealth <span className="">Management</span>
@@ -263,8 +264,9 @@ export default function App() {
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070"
             className="w-full h-full object-cover opacity-20 grayscale"
-            alt="Architecture"
+            alt="Wall Street Building"
             referrerPolicy="no-referrer"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/70 to-[#0a0a0a]" />
         </div>
@@ -459,8 +461,9 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
               <img
                 src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000"
                 className="w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
-                alt="Meeting"
+                alt="Client Meeting Logo for Wealth Planning"
                 referrerPolicy="no-referrer"
+                loading="lazy"
               />
             </motion.div>
           </div>
@@ -630,8 +633,8 @@ It is built through structure, alignment, and discipline over time.
 
       {/* How We Help & Portfolio */}
       <section id="portfolio" className="py-24">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-32">
-          <div className="grid md:grid-cols-2 gap-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             <div>
               <SectionHeading subtitle="Our strategic process">How We Structure Your Financial System</SectionHeading>
               <div className="space-y-12">
@@ -673,7 +676,7 @@ It is built through structure, alignment, and discipline over time.
               <p className="text-white/60 font-light leading-relaxed max-w-xl mb-16">
   Allocation is not about chasing returns — it is about structuring capital across risk, liquidity, and long-term objectives. Each portfolio is designed to align with your financial position and overall strategy.
 </p>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 {[
                   { label: "Private Equity", value: "35%", color: "bg-gold" },
                   { label: "Public Equities", value: "25%", color: "bg-gold-dark" },
@@ -682,7 +685,7 @@ It is built through structure, alignment, and discipline over time.
                   { label: "Cash/Liquidity", value: "5%", color: "bg-white/5" }
                 ].map((item, i) => (
                   <div key={i} className="space-y-2">
-                    <div className="flex justify-between text-sm uppercase tracking-widest">
+                    <div className="flex justify-between text-xs md:text-sm uppercase tracking-widest">
                       <span>{item.label}</span>
                       <span className="">{item.value}</span>
                     </div>
@@ -703,11 +706,11 @@ It is built through structure, alignment, and discipline over time.
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
                 loop={true}
-                className="!pb-10"
+                className="pb-12 md:pb-10"
               >
                 {testimonials.map((item, i) => (
                   <SwiperSlide key={i} className="flex justify-center">
-                    <div className="p-8 border border-white/10 bg-white/5 text-white/60 font-light text-center w-full max-w-2xl h-[220px] flex flex-col justify-between">
+                    <div className="p-6 md:p-8 border border-white/10 bg-white/5 text-white/60 font-light text-center w-full max-w-2xl min-h-[180px] flex flex-col justify-between">
                       
                       {/* Quote */}
                       <p className="italic text-lg leading-relaxed line-clamp-4">
@@ -726,7 +729,7 @@ It is built through structure, alignment, and discipline over time.
             </div>
             </div>
           </div>
-          <p className="font-sans text-3xl /30 m-14">You do not just receive advice, you gain a structured and long-term strategic partner to building, protecting, and sustaining wealth.</p>
+          <p className="font-sans text-xl md:text-2xl text-white/30 my-10 md:my-14 px-4 md:px-0 text-center">You do not just receive advice, you gain a structured and long-term strategic partner to building, protecting, and sustaining wealth.</p>
         </div>
       </section>
 
@@ -850,8 +853,9 @@ It is built through structure, alignment, and discipline over time.
           <div className="flex items-center gap-2">
               <img
                 src={logoLight}
-                alt="Logo"
+                alt="Orthodox Wealth Management Light Logo"
                 className="w-24 h-12 flex items-center justify-center"
+                loading="lazy"
               />
             <span className="font-sans text-sm tracking-widest uppercase">
               Orthodox Wealth <span className="">Management</span>
