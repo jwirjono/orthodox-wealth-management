@@ -21,6 +21,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { cn } from "./lib/utils";
 import logoLight from "/owmLogoLight.png";
+import aboutPhoto from "/Photo.jpeg";
 
 
 // --- Components ---
@@ -139,19 +140,39 @@ const CustomSelect = ({
 
 const testimonials = [
   {
-    quote: "Orthodox Wealth Management brought clarity and structure to our financial decisions — transforming how we manage, protect, and plan our wealth.",
-    author: "Hendy",
-    role: "Indonesian Businessman"
+    quote: "Orthodox Wealth Management helped us move from uncertainty to clarity in planning our retirement. Instead of generic advice, we received a structured strategy that considered our lifestyle goals, future cashflow needs, risk profile, and long-term family objectives. The process gave us confidence that our retirement is not only financially sustainable, but also properly structured for the years ahead.",
+    author: "Hendy & Katherine, Family",
+    role: "Retirement Planning"
   },
   {
-    quote: "Their integrated approach gave us confidence across investments, tax, and long-term planning.",
-    author: "Client",
-    role: "Private Investor"
+    quote: "Before working with Orthodox Wealth Management, my financial decisions felt fragmented. I had savings and investments, but no clear long-term structure. Adriel helped me understand how to align my cashflow, investments, protection, and future goals into one cohesive strategy. The advice was practical, personalized, and focused on long-term financial growth rather than short-term trends.",
+    author: "Regine, Career Professional",
+    role: "Career Professional, Personal Financial Planning & Personal Investing"
   },
   {
-    quote: "A level of strategic clarity we have not experienced with any other advisor.",
-    author: "Principal",
-    role: "Family Office"
+    quote: "What stood out most was the ability to connect my personal financial goals with my business structure and financial strategy. Orthodox Wealth Management provided insights not only on investing personally, but also on improving financial clarity and strategic planning within the business. The integrated approach helped me see my finances more holistically.",
+    author: "Satya, Entrepreneur",
+    role: "Business Owner, Personal Investment & Corporate Financial Planning"
+  },
+  {
+    quote: "Orthodox Wealth Management brought structure and strategic thinking into both my personal investments and business finances. The advice was not product-driven, but focused on building an efficient and sustainable financial system. The combination of investment planning and corporate financial insight made the engagement especially valuable.",
+    author: "Fauker, Entrepreneur",
+    role: " Personal Investment & Corporate Financial Planning"
+  },
+  {
+    quote: "The guidance I received on corporate structuring and tax planning gave me a much clearer framework for managing my business finances. Orthodox Wealth Management helped simplify areas that previously felt complicated and provided strategies that were both practical and aligned with long-term efficiency. The process felt highly professional and well thought out.",
+    author: "Kevin, Architect",
+    role: "Corporate Structuring & Tax Planning"
+  },
+  {
+    quote: "Working with Orthodox Wealth Management helped me understand that financial planning is more than investing alone. The advice I received connected my income, spending, investment strategy, and long-term goals into a much clearer financial structure. I now feel more disciplined and confident about my financial future",
+    author: "Joshua, Interior Designer",
+    role: "Personal Financial Planning & Personal Investing"
+  },
+  {
+    quote: "Orthodox Wealth Management helped me better structure both my business activities and tax planning in a way that felt organized, efficient, and sustainable. What I appreciated most was the strategic perspective — the advice was not only technically sound, but also aligned with my long-term objectives.",
+    author: "Jevon, IT Professional",
+    role: "Tax Planning & Corporate Structuring"
   }
 ];
 
@@ -459,7 +480,7 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
             >
               <div className="absolute -inset-4 border border-gold/20 translate-x-4 translate-y-4" />
               <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000"
+                src={aboutPhoto}
                 className="w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
                 alt="Client Meeting Logo for Wealth Planning"
                 referrerPolicy="no-referrer"
@@ -678,8 +699,8 @@ It is built through structure, alignment, and discipline over time.
 </p>
               <div className="space-y-3 md:space-y-4">
                 {[
-                  { label: "Private Equity", value: "35%", color: "bg-gold" },
-                  { label: "Public Equities", value: "25%", color: "bg-gold-dark" },
+                  { label: "Public Equity", value: "35%", color: "bg-gold" },
+                  { label: "Private Equities", value: "25%", color: "bg-gold-dark" },
                   { label: "Real Estate", value: "20%", color: "bg-white/20" },
                   { label: "Fixed Income", value: "15%", color: "bg-white/10" },
                   { label: "Cash/Liquidity", value: "5%", color: "bg-white/5" }
@@ -710,16 +731,16 @@ It is built through structure, alignment, and discipline over time.
               >
                 {testimonials.map((item, i) => (
                   <SwiperSlide key={i} className="flex justify-center">
-                    <div className="p-6 md:p-8 border border-white/10 bg-white/5 text-white/60 font-light text-center w-full max-w-2xl min-h-[180px] flex flex-col justify-between">
+                    <div className="p-8 border border-white/10 bg-white/5 text-white/80 text-center w-full max-w-2xl h-[300px] flex flex-col justify-center">
                       
                       {/* Quote */}
-                      <p className="italic text-lg leading-relaxed line-clamp-4">
+                      <p className="italic text-md leading-relaxed line-clamp-6">
                         "{item.quote}"
                       </p>
 
                       {/* Author */}
                       <p className="mt-6 text-white not-italic font-medium uppercase tracking-widest text-xs">
-                        — {item.author}, {item.role}
+                        — {item.author} <br/>{item.role}
                       </p>
 
                     </div>
@@ -851,12 +872,6 @@ It is built through structure, alignment, and discipline over time.
       <footer className="py-12 border-t border-white/10 bg-black">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-              <img
-                src={logoLight}
-                alt="Orthodox Wealth Management Light Logo"
-                className="w-24 h-12 flex items-center justify-center"
-                loading="lazy"
-              />
             <span className="font-sans text-sm tracking-widest uppercase">
               Orthodox Wealth <span className="">Management</span>
             </span>
