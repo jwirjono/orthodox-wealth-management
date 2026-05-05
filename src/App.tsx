@@ -140,39 +140,44 @@ const CustomSelect = ({
 
 const testimonials = [
   {
-    quote: "Orthodox Wealth Management helped us move from uncertainty to clarity in planning our retirement. Instead of generic advice, we received a structured strategy that considered our lifestyle goals, future cashflow needs, risk profile, and long-term family objectives. The process gave us confidence that our retirement is not only financially sustainable, but also properly structured for the years ahead.",
+    quote: "Orthodox Wealth Management helped us build a structured retirement strategy that aligned our investments, cashflow, protection, and long-term family goals into one comprehensive plan.",
     author: "Hendy & Katherine, Family",
     role: "Retirement Planning"
   },
   {
-    quote: "Before working with Orthodox Wealth Management, my financial decisions felt fragmented. I had savings and investments, but no clear long-term structure. Adriel helped me understand how to align my cashflow, investments, protection, and future goals into one cohesive strategy. The advice was practical, personalized, and focused on long-term financial growth rather than short-term trends.",
+    quote: "What stood out was the integrated approach. My investments, cashflow, protection, and long-term goals were all structured into one clear financial strategy.",
     author: "Regine, Career Professional",
     role: "Career Professional, Personal Financial Planning & Personal Investing"
   },
   {
-    quote: "What stood out most was the ability to connect my personal financial goals with my business structure and financial strategy. Orthodox Wealth Management provided insights not only on investing personally, but also on improving financial clarity and strategic planning within the business. The integrated approach helped me see my finances more holistically.",
+    quote: "Orthodox Wealth Management helped connect my personal investments and business finances into one aligned strategy, giving me much better clarity and structure overall.",
     author: "Satya, Entrepreneur",
     role: "Business Owner, Personal Investment & Corporate Financial Planning"
   },
   {
-    quote: "Orthodox Wealth Management brought structure and strategic thinking into both my personal investments and business finances. The advice was not product-driven, but focused on building an efficient and sustainable financial system. The combination of investment planning and corporate financial insight made the engagement especially valuable.",
+    quote: "The advice was strategic, comprehensive, and not product-driven. I gained a clearer structure for both my personal wealth and business financial planning.",
     author: "Fauker, Entrepreneur",
     role: " Personal Investment & Corporate Financial Planning"
   },
   {
-    quote: "The guidance I received on corporate structuring and tax planning gave me a much clearer framework for managing my business finances. Orthodox Wealth Management helped simplify areas that previously felt complicated and provided strategies that were both practical and aligned with long-term efficiency. The process felt highly professional and well thought out.",
+    quote: "The combination of corporate structuring and tax planning gave me a much more efficient and organized financial framework for my business.",
     author: "Kevin, Architect",
     role: "Corporate Structuring & Tax Planning"
   },
   {
-    quote: "Working with Orthodox Wealth Management helped me understand that financial planning is more than investing alone. The advice I received connected my income, spending, investment strategy, and long-term goals into a much clearer financial structure. I now feel more disciplined and confident about my financial future",
+    quote: "Orthodox Wealth Management helped turn fragmented financial decisions into one structured plan that aligned my investments, goals, and overall financial direction.",
     author: "Joshua, Interior Designer",
     role: "Personal Financial Planning & Personal Investing"
   },
   {
-    quote: "Orthodox Wealth Management helped me better structure both my business activities and tax planning in a way that felt organized, efficient, and sustainable. What I appreciated most was the strategic perspective — the advice was not only technically sound, but also aligned with my long-term objectives.",
+    quote: "The advice was highly structured and comprehensive, helping me align tax planning and business structuring with my long-term financial objectives.",
     author: "Jevon, IT Professional",
     role: "Tax Planning & Corporate Structuring"
+  },
+  {
+    quote: "Adriel approached mortgage planning strategically — focusing not only on financing, but also on cashflow, structure, and long-term financial impact.",
+    author: "Vincent, Hotelier",
+    role: "Mortgage Planning"
   }
 ];
 
@@ -450,7 +455,7 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
               <SectionHeading subtitle="WHO WE ARE">A Foundation of Trust</SectionHeading>
               <div className="space-y-6 text-white/70 font-light text-md leading-relaxed">
                 <p>
-  Orthodox Wealth Management (OWM) is a financial advisory firm founded in 2024 by Adriel Reynaldo Louis, CFP®, with professional experience across Australia and Indonesia since 2020.
+  Orthodox Wealth Management (OWM) is a financial advisory firm founded in 2024 by Adriel Reynaldo Louis, B.Bus, CFP®, with professional experience across Australia and Indonesia since 2020.
 </p>
 
 <p>
@@ -478,7 +483,7 @@ Built on time-tested “orthodox” principles, our approach ensures your wealth
               whileInView={{ opacity: 1, scale: 1 }}
               className="relative mb-[250px]"
             >
-              <div className="absolute -inset-4 border border-gold/20 translate-x-4 translate-y-4" />
+              {/* <div className="absolute -inset-4 border border-gold/20 translate-x-4 translate-y-4" /> */}
               <img
                 src={aboutPhoto}
                 className="w-full h-[500px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
@@ -731,7 +736,7 @@ It is built through structure, alignment, and discipline over time.
               >
                 {testimonials.map((item, i) => (
                   <SwiperSlide key={i} className="flex justify-center">
-                    <div className="p-8 border border-white/10 bg-white/5 text-white/80 text-center w-full max-w-2xl h-[300px] flex flex-col justify-center">
+                    <div className="p-8 border border-white/10 bg-white/5 text-white/80 text-center w-full max-w-2xl h-[260px] flex flex-col justify-center">
                       
                       {/* Quote */}
                       <p className="italic text-md leading-relaxed line-clamp-6">
