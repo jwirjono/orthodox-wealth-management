@@ -141,18 +141,18 @@ const CustomSelect = ({
 const testimonials = [
   {
     quote: "Orthodox Wealth Management helped us build a structured retirement strategy that aligned our investments, cashflow, protection, and long-term family goals into one comprehensive plan.",
-    author: "Hendy & Katherine, Family",
+    author: "Hendy & Katherine, Family Business Owner",
     role: "Retirement Planning"
   },
   {
     quote: "What stood out was the integrated approach. My investments, cashflow, protection, and long-term goals were all structured into one clear financial strategy.",
     author: "Regine, Career Professional",
-    role: "Career Professional, Personal Financial Planning & Personal Investing"
+    role: "Personal Financial Planning & Personal Investing"
   },
   {
     quote: "Orthodox Wealth Management helped connect my personal investments and business finances into one aligned strategy, giving me much better clarity and structure overall.",
-    author: "Satya, Entrepreneur",
-    role: "Business Owner, Personal Investment & Corporate Financial Planning"
+    author: "Satya, Business Owner",
+    role: "Personal Investment & Corporate Financial Planning"
   },
   {
     quote: "The advice was strategic, comprehensive, and not product-driven. I gained a clearer structure for both my personal wealth and business financial planning.",
